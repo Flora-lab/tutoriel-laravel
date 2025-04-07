@@ -11,10 +11,12 @@ class Categorie extends Model
     protected $fillable = [ 
         'nomcategorie','imagecategorie'    
     ]; 
-
           
     public function scategories() 
     {          return $this->hasMany(Scategorie::class ,"categorieID");    
+    } 
+    public function article() 
+    {          return $this->hasMany(Article::class,"categorieID");   
     } 
 
 }
